@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Document</title>
+    <style>
+        /* global styles */
+        body {
+            background-color: papayawhip;
+            padding: 15px;
+            font-family: Arial, sans-serif
+        }
+        .wrapper {
+            width: min(1200px, 100%);
+            margin-inline: auto;
+            background-color: whitesmoke;
+        }
+        .form {
+            padding: 15px
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .box {
+            outline: 1pt solid palevioletred;
+            height: 40px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!----------------------->
+    <!-- Testing grid ONLY -->
+    <!----------------------->
+    <div class="wrapper">
+        <form action="#" class="form">
+            <div class="grid" column-width="450px" wrap>
+                <div>
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="firstname">
+                            <span>First name:</span>
+                            <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+                        </label>
+                        <label for="lastname">
+                            <span>Last name:</span>
+                            <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+                        </label>
+                        <label for="email">
+                            <span>Email:</span>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </label>
+                    </div>
+        
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="address">
+                            <span>Address:</span>
+                            <input type="text" id="address" name="address" placeholder="Address" required>
+                        </label>
+                    </div>
+        
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="city">
+                            <span>City:</span>
+                            <input type="text" id="city" name="city" placeholder="City" required>
+                        </label>
+                        <label for="state">
+                            <span>State:</span>
+                            <select name="state" id="state">
+                                <option value="">State</option>
+                                <option value="">NV</option>
+                                <option value="">LA</option>
+                                <option value="">FL</option>
+                                <option value="">WA</option>
+                            </select>
+                        </label>
+                        <label for="zip">
+                            <span>Zip:</span>
+                            <input type="text" id="zip" name="zip" placeholder="ZIP" required>
+                        </label>
+                    </div>
+        
+                    <!-- row -->
+                    <div class="flex" valign="top">
+                        <label for="country">
+                            <span>Phone:</span>
+                            <select name="country" id="country">
+                                <option value="">Country</option>
+                                <option value="">USA</option>
+                                <option value="">Canada</option>
+                                <option value="">Mexico</option>
+                                <option value="">UK</option>
+                            </select>
+                        </label>
+                        <label for="phone">
+                            <span>Phone:</span>
+                            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                        </label>
+                    </div>
+                    
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="comments">
+                            <span>Comments:</span>
+                            <textarea name="comments" id="comments" placeholder="Special requests"></textarea>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="firstname">
+                            <span>First name:</span>
+                            <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+                        </label>
+                        <label for="lastname">
+                            <span>Last name:</span>
+                            <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+                        </label>
+                        <label for="email">
+                            <span>Email:</span>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </label>
+                    </div>
+        
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="address">
+                            <span>Address:</span>
+                            <input type="text" id="address" name="address" placeholder="Address" required>
+                        </label>
+                    </div>
+        
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="city">
+                            <span>City:</span>
+                            <input type="text" id="city" name="city" placeholder="City" required>
+                        </label>
+                        <label for="state">
+                            <span>State:</span>
+                            <select name="state" id="state">
+                                <option value="">State</option>
+                                <option value="">NV</option>
+                                <option value="">LA</option>
+                                <option value="">FL</option>
+                                <option value="">WA</option>
+                            </select>
+                        </label>
+                        <label for="zip">
+                            <span>Zip:</span>
+                            <input type="text" id="zip" name="zip" placeholder="ZIP" required>
+                        </label>
+                    </div>
+        
+                    <!-- row -->
+                    <div class="flex" valign="top">
+                        <label for="country">
+                            <span>Phone:</span>
+                            <select name="country" id="country">
+                                <option value="">Country</option>
+                                <option value="">USA</option>
+                                <option value="">Canada</option>
+                                <option value="">Mexico</option>
+                                <option value="">UK</option>
+                            </select>
+                        </label>
+                        <label for="phone">
+                            <span>Phone:</span>
+                            <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                        </label>
+                    </div>
+                    
+                    <!-- row -->
+                    <div class="flex">
+                        <label for="comments">
+                            <span>Comments:</span>
+                            <textarea name="comments" id="comments" placeholder="Special requests"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <!----------------------->
+    <!-- Testing flex ONLY -->
+    <!----------------------->
+    
+
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

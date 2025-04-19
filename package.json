@@ -1,0 +1,11 @@
+{
+  "name": "div-flex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --style=expanded ./scss/index.scss ./assets/css/styles.css"
+  },
+  "author": "@salegomx",
+  "license": "MIT",
+  "description": "An easier way to build layouts with CSS flex and grid"
+}

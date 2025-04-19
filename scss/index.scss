@@ -1,0 +1,100 @@
+@layer base;
+
+@layer base {
+    .flex {
+        /* defaults */
+        --default_flex-direction: row;
+        --default_flex-wrap: wrap;
+        --default_justify-content: space-between; // align=""
+        --default_align-items: center; // valign=""
+        --default_gap: 15px;
+
+        /* defaults for children */
+        --default_min-width: 200px;
+        --default_flex-basis: 0;
+        --default_shrink: 0;
+        --default_grow: 1;
+        --default_order: unset;
+
+        /* derived variables */
+        --gap-half: calc(var(--gap, var(--default_gap)) / 2);
+        --gap-double: calc(var(--gap, var(--default_gap)) * 2);
+    }
+}
+
+.flex {
+    * {
+        box-sizing: border-box;
+    }
+    display: flex;
+    flex-direction: var(--flex-direction, var(--default_flex-direction));
+    flex-wrap: var(--flex-wrap, var(--default_flex-wrap));
+    justify-content: var(--justify-content, var(--default_justify-content));
+    align-items: var(--align-items, var(--default_align-items));
+    gap: var(--gap, var(--default_gap));
+    padding-block: var(--gap-half);
+    > * {
+        min-width: var(--min-width, var(--default_min-width));
+        flex-basis: var(--flex-basis, var(--default_flex-basis));
+        flex-grow: var(--shirnk, var(--default_shrink));
+        flex-grow: var(--grow, var(--default_grow));
+        order: var(--order, var(--default_order));
+    }
+
+    /* forms */
+    legend {
+        margin-block: var(--gap-half)
+    }
+    label > {
+        span:first-child {
+            display: block;
+            margin-bottom: var(--gap-half);
+        }
+        input, select, textarea {
+            width: 100%;
+            border: none !important;
+            outline: 1px solid #ccc;
+            padding: 4px 8px;
+            &:focus-visible {
+                outline: 2px solid #2a82df;
+            }
+        }
+        textarea {
+            resize: vertical;
+            height: 75px;
+            min-height: 75px;
+            max-height: 150px;
+        }
+    }
+    button {
+        min-width: var(--min-width, 20px)
+    }
+}
+
+@layer base {
+    .grid {
+        /* defaults */
+        --default_columns: 1;
+        --default_gap: 25px;
+        --default_column-width: 200px;
+
+        /* defaults for children */
+        
+
+        /* derived variables */
+        --gap-half: calc(var(--gap, var(--default_gap)) / 2);
+        --gap-double: calc(var(--gap, var(--default_gap)) * 2);
+    }
+}
+
+.grid {
+    * {
+        box-sizing: border-box;
+    }
+    display: grid;
+    grid-template-columns: repeat(var(--columns, var(--default_columns)), 1fr);
+    gap: var(--gap, var(--default_gap));
+    &[wrap] {
+        grid-template-columns: repeat(auto-fit, minmax(var(--column-width, var(--default_column-width)), 1fr));
+    }
+}
