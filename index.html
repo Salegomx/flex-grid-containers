@@ -18,7 +18,7 @@
             background-color: whitesmoke;
         }
         .form {
-            padding: 15px
+            padding: 25px
         }
         .title {
             font-size: 2rem;
@@ -26,10 +26,14 @@
             color: #333;
             margin-bottom: 20px;
         }
+        .grid {
+            outline: 2pt solid red
+        }
+        .flex {
+            outline: 1pt solid green
+        }
         .box {
-            outline: 1pt solid palevioletred;
-            height: 40px;
-            width: 60px;
+            outline: 1pt solid blue;
         }
     </style>
 </head>
@@ -39,7 +43,11 @@
     <!----------------------->
     <div class="wrapper">
         <form action="#" class="form">
-            <div class="grid" column-width="450px" wrap>
+            <div class="flex">
+                <div class="box" width="50%">
+                    <h2 class="title">This is a title</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
+                </div>
                 <div>
                     <!-- row -->
                     <div class="flex">
@@ -187,6 +195,7 @@
                     </div>
                 </div>
             </div>
+            <br>
             <div style="text-align: center;">
                 <input type="submit" value="Submit">
             </div>

@@ -7,7 +7,7 @@ flexContainers.forEach((container) => {
     const align = container.getAttribute('align');
     const valign = container.getAttribute('valign');
     
-    if (gap) container.style.setProperty('--gap', gap);
+    if (gap) container.style.setProperty('--flex-gap', gap);
     if (direction) container.style.setProperty('--flex-direction', direction);
     if (align) container.style.setProperty('--justify-content', align);
     if (valign) container.style.setProperty('--align-items', valign);
@@ -40,7 +40,7 @@ gridContainers.forEach((container) => {
     const columns = container.getAttribute('columns');
     const column_width = container.getAttribute('column-width');
 
-    if (gap) container.style.setProperty('--gap', gap);
+    if (gap) container.style.setProperty('--grid-gap', gap);
     if (columns) container.style.setProperty('--columns', columns);
     if (column_width) container.style.setProperty('--column-width', column_width);
 

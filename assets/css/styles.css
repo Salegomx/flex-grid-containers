@@ -2,29 +2,29 @@
 @layer base {
   .flex {
     /* defaults */
-    --default_flex-direction: row;
-    --default_flex-wrap: wrap;
-    --default_justify-content: space-between;
-    --default_align-items: center;
-    --default_gap: 15px;
+    --flex-direction: row;
+    --flex-wrap: wrap;
+    --justify-content: space-between;
+    --align-items: center;
+    --flex-gap: 15px;
     /* defaults for children */
-    --default_min-width: 200px;
-    --default_flex-basis: 0;
-    --default_shrink: 0;
-    --default_grow: 1;
-    --default_order: unset;
+    --min-width: 150px;
+    --flex-basis: 0;
+    --shrink: 0;
+    --grow: 1;
+    --order: unset;
     /* derived variables */
-    --gap-half: calc(var(--gap, var(--default_gap)) / 2);
-    --gap-double: calc(var(--gap, var(--default_gap)) * 2);
+    --gap-half: calc(var(--flex-gap) / 2);
+    --gap-double: calc(var(--flex-gap) * 2);
   }
 }
 .flex {
-  display: flex;
-  flex-direction: var(--flex-direction, var(--default_flex-direction));
-  flex-wrap: var(--flex-wrap, var(--default_flex-wrap));
-  justify-content: var(--justify-content, var(--default_justify-content));
-  align-items: var(--align-items, var(--default_align-items));
-  gap: var(--gap, var(--default_gap));
+  display: flex !important;
+  flex-direction: var(--flex-direction);
+  flex-wrap: var(--flex-wrap);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  gap: var(--flex-gap);
   padding-block: var(--gap-half);
   /* forms */
 }
@@ -32,21 +32,20 @@
   box-sizing: border-box;
 }
 .flex > * {
-  min-width: var(--min-width, var(--default_min-width));
-  flex-basis: var(--flex-basis, var(--default_flex-basis));
-  flex-grow: var(--shirnk, var(--default_shrink));
-  flex-grow: var(--grow, var(--default_grow));
-  order: var(--order, var(--default_order));
-}
-.flex legend {
-  margin-block: var(--gap-half);
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: var(--min-width);
+  flex-basis: var(--flex-basis);
+  flex-grow: var(--shirnk);
+  flex-grow: var(--grow);
+  order: var(--order);
 }
 .flex label > span:first-child {
   display: block;
   margin-bottom: var(--gap-half);
 }
 .flex label > input, .flex label > select, .flex label > textarea {
-  width: 100%;
+  width: 100% !important;
   border: none !important;
   outline: 1px solid #ccc;
   padding: 4px 8px;
@@ -67,25 +66,33 @@
 @layer base {
   .grid {
     /* defaults */
-    --default_columns: 1;
-    --default_gap: 25px;
-    --default_column-width: 200px;
+    --columns: 1;
+    --grid-gap: 25px;
+    --column-width: 1fr;
     /* defaults for children */
     /* derived variables */
-    --gap-half: calc(var(--gap, var(--default_gap)) / 2);
-    --gap-double: calc(var(--gap, var(--default_gap)) * 2);
+    --gap-half: calc(var(--grid-gap) / 2);
+    --gap-double: calc(var(--grid-gap) * 2);
   }
 }
 .grid {
-  display: grid;
-  grid-template-columns: repeat(var(--columns, var(--default_columns)), 1fr);
-  gap: var(--gap, var(--default_gap));
+  display: grid !important;
+  gap: var(--grid-gap);
+  /* Children */
 }
 .grid * {
   box-sizing: border-box;
 }
+.grid[columns] {
+  grid-template-columns: repeat(var(--columns), var(--column-width));
+}
 .grid[wrap] {
-  grid-template-columns: repeat(auto-fit, minmax(var(--column-width, var(--default_column-width)), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, var(--column-width)));
+}
+.grid > * {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
