@@ -21,20 +21,20 @@
             padding: 25px
         }
         .title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #333;
-            margin-bottom: 20px;
+            margin-block: 0 20px;
         }
-        .grid {
+        /*[data-layout="grid"] {
             outline: 2pt solid red
         }
-        .flex {
+        [data-layout="flow"] {
             outline: 1pt solid green
         }
         .box {
             outline: 1pt solid blue;
-        }
+        }*/
     </style>
 </head>
 <body>
@@ -42,15 +42,40 @@
     <!-- Testing grid ONLY -->
     <!----------------------->
     <div class="wrapper">
+        <nav>
+            <ul data-layout="flow">
+                <li><a href="">Home</a></li>
+                <li><a href="">Area</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Amenities</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Book Now</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Book Now</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Book Now</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br>
+    <div class="wrapper">
         <form action="#" class="form">
-            <div class="flex">
-                <div class="box" width="50%">
+            <div data-layout="grid" data-columns="auto auto auto auto" data-width="auto">
+                <div class="box">
                     <h2 class="title">This is a title</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veritatis optio officia beatae ut quidem ex iusto perspiciatis voluptatum quis veniam explicabo recusandae, aliquam cumque in totam! Reprehenderit, dolorum nobis?
                 </div>
                 <div>
+                    <div class="title">Form 1</div>
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="firstname">
                             <span>First name:</span>
                             <input type="text" id="firstname" name="firstname" placeholder="First name" required>
@@ -66,7 +91,7 @@
                     </div>
         
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="address">
                             <span>Address:</span>
                             <input type="text" id="address" name="address" placeholder="Address" required>
@@ -74,7 +99,7 @@
                     </div>
         
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="city">
                             <span>City:</span>
                             <input type="text" id="city" name="city" placeholder="City" required>
@@ -96,7 +121,7 @@
                     </div>
         
                     <!-- row -->
-                    <div class="flex" valign="top">
+                    <div data-layout="flow" valign="top">
                         <label for="country">
                             <span>Phone:</span>
                             <select name="country" id="country">
@@ -114,16 +139,17 @@
                     </div>
                     
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="comments">
                             <span>Comments:</span>
                             <textarea name="comments" id="comments" placeholder="Special requests"></textarea>
                         </label>
                     </div>
                 </div>
-                <div>
+                <div data-span="6">
+                    <div class="title">Form 2</div>
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="firstname">
                             <span>First name:</span>
                             <input type="text" id="firstname" name="firstname" placeholder="First name" required>
@@ -139,7 +165,7 @@
                     </div>
         
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="address">
                             <span>Address:</span>
                             <input type="text" id="address" name="address" placeholder="Address" required>
@@ -147,7 +173,7 @@
                     </div>
         
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="city">
                             <span>City:</span>
                             <input type="text" id="city" name="city" placeholder="City" required>
@@ -169,7 +195,7 @@
                     </div>
         
                     <!-- row -->
-                    <div class="flex" valign="top">
+                    <div data-layout="flow" valign="top">
                         <label for="country">
                             <span>Phone:</span>
                             <select name="country" id="country">
@@ -187,7 +213,7 @@
                     </div>
                     
                     <!-- row -->
-                    <div class="flex">
+                    <div data-layout="flow">
                         <label for="comments">
                             <span>Comments:</span>
                             <textarea name="comments" id="comments" placeholder="Special requests"></textarea>
@@ -205,7 +231,7 @@
     <br>
 
     <!----------------------->
-    <!-- Testing flex ONLY -->
+    <!-- Testing flow ONLY -->
     <!----------------------->
     
 

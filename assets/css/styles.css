@@ -1,12 +1,13 @@
 @layer base;
 @layer base {
-  .flex {
+  [data-layout=flow] {
     /* defaults */
     --flex-direction: row;
     --flex-wrap: wrap;
     --justify-content: space-between;
     --align-items: center;
     --flex-gap: 15px;
+    --flex-width: 100%;
     /* defaults for children */
     --min-width: 150px;
     --flex-basis: 0;
@@ -18,7 +19,8 @@
     --gap-double: calc(var(--flex-gap) * 2);
   }
 }
-.flex {
+[data-layout=flow] {
+  list-style: none;
   display: flex !important;
   flex-direction: var(--flex-direction);
   flex-wrap: var(--flex-wrap);
@@ -26,73 +28,78 @@
   align-items: var(--align-items);
   gap: var(--flex-gap);
   padding-block: var(--gap-half);
+  width: min(100%, var(--flex-width));
   /* forms */
 }
-.flex * {
+[data-layout=flow] * {
   box-sizing: border-box;
 }
-.flex > * {
+[data-layout=flow] > * {
   margin: 0 !important;
-  padding: 0 !important;
   min-width: var(--min-width);
   flex-basis: var(--flex-basis);
   flex-grow: var(--shirnk);
   flex-grow: var(--grow);
   order: var(--order);
 }
-.flex label > span:first-child {
+[data-layout=flow] label > span:first-child {
   display: block;
   margin-bottom: var(--gap-half);
 }
-.flex label > input, .flex label > select, .flex label > textarea {
+[data-layout=flow] label > input, [data-layout=flow] label > select, [data-layout=flow] label > textarea {
   width: 100% !important;
   border: none !important;
   outline: 1px solid #ccc;
   padding: 4px 8px;
 }
-.flex label > input:focus-visible, .flex label > select:focus-visible, .flex label > textarea:focus-visible {
+[data-layout=flow] label > input:focus-visible, [data-layout=flow] label > select:focus-visible, [data-layout=flow] label > textarea:focus-visible {
   outline: 2px solid #2a82df;
 }
-.flex label > textarea {
+[data-layout=flow] label > textarea {
   resize: vertical;
   height: 75px;
   min-height: 75px;
   max-height: 150px;
 }
-.flex button {
+[data-layout=flow] button {
   min-width: var(--min-width, 20px);
 }
 
 @layer base {
-  .grid {
+  [data-layout=grid] {
     /* defaults */
-    --columns: 1;
+    --template-columns: repeat(2, 1fr);
     --grid-gap: 25px;
-    --column-width: 1fr;
+    --grid-width: 100%;
     /* defaults for children */
+    --span: 2;
     /* derived variables */
     --gap-half: calc(var(--grid-gap) / 2);
     --gap-double: calc(var(--grid-gap) * 2);
   }
 }
-.grid {
+[data-layout=grid] {
+  container-type: inline-size;
   display: grid !important;
   gap: var(--grid-gap);
+  width: min(100%, var(--grid-width));
   /* Children */
+  /* Responsive */
 }
-.grid * {
+[data-layout=grid] * {
   box-sizing: border-box;
 }
-.grid[columns] {
-  grid-template-columns: repeat(var(--columns), var(--column-width));
-}
-.grid[wrap] {
-  grid-template-columns: repeat(auto-fit, minmax(100%, var(--column-width)));
-}
-.grid > * {
+[data-layout=grid] > * {
   margin: 0 !important;
-  padding: 0 !important;
   width: 100%;
+}
+@container (min-width: 600px) {
+  [data-layout=grid] {
+    grid-template-columns: var(--template-columns);
+  }
+  [data-layout=grid] > *[data-span] {
+    grid-column: span var(--span);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

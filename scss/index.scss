@@ -1,13 +1,14 @@
 @layer base;
 
 @layer base {
-    .flex {
+    [data-layout="flow"] {
         /* defaults */
         --flex-direction: row;
         --flex-wrap: wrap;
         --justify-content: space-between; // align=""
         --align-items: center; // valign=""
         --flex-gap: 15px;
+        --flex-width: 100%;
 
         /* defaults for children */
         --min-width: 150px;
@@ -22,10 +23,11 @@
     }
 }
 
-.flex {
+[data-layout="flow"] {
     * {
         box-sizing: border-box;
     }
+    list-style: none;
     display: flex !important;
     flex-direction: var(--flex-direction);
     flex-wrap: var(--flex-wrap);
@@ -33,16 +35,15 @@
     align-items: var(--align-items);
     gap: var(--flex-gap);
     padding-block: var(--gap-half);
+    width: min(100%, var(--flex-width));
     > * {
         margin: 0 !important;
-        padding: 0 !important;
         min-width: var(--min-width);
         flex-basis: var(--flex-basis);
         flex-grow: var(--shirnk);
         flex-grow: var(--grow);
         order: var(--order);
     }
-
     /* forms */
     label > {
         span:first-child {
@@ -71,14 +72,14 @@
 }
 
 @layer base {
-    .grid {
+    [data-layout="grid"] {
         /* defaults */
-        --columns: 1;
+        --template-columns: repeat(2, 1fr);
         --grid-gap: 25px;
-        --column-width: 1fr;
+        --grid-width: 100%;
 
         /* defaults for children */
-        
+        --span: 2;
 
         /* derived variables */
         --gap-half: calc(var(--grid-gap) / 2);
@@ -86,33 +87,27 @@
     }
 }
 
-.grid {
+[data-layout="grid"] {
     * {
         box-sizing: border-box;
     }
+    container-type: inline-size;
     display: grid !important;
     gap: var(--grid-gap);
-    &[columns] {
-        grid-template-columns:
-            repeat(
-                var(--columns),
-                var(--column-width)
-            );
-    }
-    &[wrap] {
-        grid-template-columns:
-            repeat(
-                auto-fit,
-                minmax(
-                    100%, var(--column-width)
-                )
-            );
-    }   
-
+    width: min(100%, var(--grid-width));
     /* Children */
     > * {
         margin: 0 !important;
-        padding: 0 !important;
         width: 100%;
+    }
+    /* Responsive */
+    @container (min-width: 600px) {
+        grid-template-columns: var(--template-columns);
+
+        > * {
+            &[data-span] {
+                grid-column: span var(--span);
+            }
+        }
     }
 }
