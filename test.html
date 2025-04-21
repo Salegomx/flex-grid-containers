@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+<HTML LANG="en">
+	<HEAD>
+		
+		<TITLE>OpenHotel.org</TITLE>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+		<META NAME="revisit-after" CONTENT="10 days">
+		<META NAME="robots" CONTENT="FOLLOW,INDEX">
+		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		
+			    <META NAME="AUTHOR" CONTENT="info@openhotel.com">
+			
+			    <META NAME="keywords" CONTENT="">
+			
+			    <META NAME="meta_keywords" CONTENT="">
+			
+			    <META NAME="description" CONTENT="">
+			
+			    <META NAME="meta_description" CONTENT="">
+			
+			    <META NAME="title" CONTENT="OpenHotel.org">
+			
+
+		
+		<LINK HREF="//openhotel.com/templates/general/js/core/styles/styles.css" REL="stylesheet" TYPE="text/css">
+		<LINK HREF="//openhotel.com/templates/general/js/jqueryui/styles.css" REL="stylesheet" TYPE="text/css">
+		<LINK HREF="//openhotel.com/templates/general/js/lightbox/styles.css" REL="stylesheet" TYPE="text/css">
+		<LINK HREF="//openhotel.com/templates/general/js/tooltip/styles.css" REL="stylesheet" TYPE="text/css">
+		<LINK HREF="//openhotel.com/templates/general/js/prompt/styles.css" REL="stylesheet" TYPE="text/css">
+		<LINK HREF="//openhotel.com/templates/general/js/select/styles.css" REL="stylesheet" TYPE="text/css">
+
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/start.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/core/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/utilities/main.js"></SCRIPT>
+
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/jqueryui/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/core/ui.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/lightbox/main.js"></SCRIPT>
+
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/tooltip/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/prompt/main.js"></SCRIPT>
+
+		
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/ajaxform/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/ajaxreport/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/clock/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/select/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/purr/main.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/core/history.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/tooltip/tippy.js"></SCRIPT>
+		<SCRIPT TYPE="text/javascript" SRC="//openhotel.com/templates/general/js/migrate.js"></SCRIPT>
+
+		
+		<LINK REL="SHORTCUT ICON" HREF="//openhotel.com/favicon.ico">
+		<LINK HREF="//openhotel.com/templates/admin/general/theme/modern/styles/styles.css" REL="stylesheet" TYPE="text/css">
+		<SCRIPT SRC="//openhotel.com/templates/admin/general/theme/modern/scripts.js" TYPE="text/javascript"></SCRIPT>
+		<LINK HREF="//openhotel.com/templates/general/js/scroll/main.css" REL="stylesheet" TYPE="text/css">
+		<SCRIPT SRC="//openhotel.com/templates/general/js/scroll/main.js" TYPE="text/javascript"></SCRIPT>
+        <META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
+		<SCRIPT SRC="//openhotel.com/templates/general/js/utilities/polyfill/standalone.js"></SCRIPT>
+	</HEAD>
+	<BODY>
+		<DIV ID="layoutHeader">
+			<DIV ID="layoutLogo">
+				<DIV CLASS="layoutHamburger">
+					<INPUT TYPE="checkbox" ID="layoutHamburgerButton">
+
+					<LABEL FOR="layoutHamburgerButton">
+						<SPAN CLASS="top"></SPAN>
+						<SPAN CLASS="center"></SPAN>
+						<SPAN CLASS="bottom"></SPAN>
+					</LABEL>
+
+					<DIV CLASS="mobileRightPanelButton">
+						<A HREF="javascript:;" TITLE="Search" ID="ohSearchTop"><IMG ALT="Search" TITLE="Search" SRC="//openhotel.com/common/images/admin/hotel/search-glass-solid-black.png"></A>
+						<A HREF="javascript:;" TITLE="Quick Links" ID="ohQuickLinks"><IMG ALT="Quick Links" TITLE="Quick Links" SRC="//openhotel.com/common/images/admin/hotel/quicklink_black.png"></A>
+						<A HREF="javascript:;" ONCLICK="myLayoutManager.toggleRightPanelMobile();"><IMG SRC="//openhotel.com/common/images/admin/menu/icn_right_panel.svg" ALT="Close" TITLE="Close"></A>
+					</DIV>
+				</DIV>
+
+    			
+				<DIV ID="layoutSiteName">
+					OpenHotel.org 
+				</DIV>
+			</DIV>
+			
+
+<DIV CLASS="layoutTopCenterMenu">
+	<DIV CLASS="layoutTopCenterWelcome">Welcome Sergio&nbsp;Gomez</DIV>
+	<DIV CLASS="layoutTopCenterShowme">
+		<DIV CLASS="layoutTopCenterTitle">My Stuff</DIV>
+		<A ALT="My Account" TITLE="My Account" ID="userMenuIconMyAccount" HREF="//openhotel.org/admin/login.cfm/mode/details">My Account</A>
+		
+			
+			<A ALT="Theme" TITLE="Theme"  ID="userMenuIconTheme" HREF="javascript:;" ONCLICK="myLayoutManager.loadTheme()">Theme Settings</A>
+			
+			<A ALT="My Schedule" TITLE="My Schedule" ID="userMenuIconSchedule" HREF="//openhotel.org/admin/schedule/my.cfm">My Schedule</A>
+		
+			<DIV CLASS="layoutTopCenterTitle">Actions</DIV>
+		
+					
+					<A ALT="Sell A Product" TITLE="Sell A Product" ID="userMenuIconSellAProduct" REL="userMenuLightbox" HREF="//openhotel.org/admin/hotel/products.cfm/mode/buy/header/lite?iframe=Yes&width=900&height=675">Sell A Product</A>
+				
+					<A ALT="Claim Cash Drawer" TITLE="Claim Cash Drawer" ID="userMenuIconCashDrawer" REL="userMenuLightbox" HREF="//openhotel.org/admin/hotel/payments/cashdrawer.cfm/mode/unclaimed/header/lite?iframe=yes&width=500&height=250">Claim Cash Drawer</A>
+				
+					<A ALT="View Housekeeping" TITLE="View Housekeeping" ID="userMenuIconHousekeeping" HREF="//openhotel.org/admin/hotel/housekeeping/m/index.cfm">View Housekeeping</A>
+				
+		<DIV CLASS="layoutTopCenterTitle">Links</DIV>
+		<A ALT="Website" TITLE="Website" ID="userMenuIconWebsite" HREF="//openhotel.org" TARGET="_blank">Website</A>
+		<A ALT="Support Portal" TITLE="Support Portal" ID="userMenuIconSupport" HREF="//openhotel.org/admin/support/">Support Portal</A>
+		<A ALT="Settings" TITLE="Settings" ID="userMenuIconSettings" HREF="//openhotel.org/admin/settings.cfm">Settings</A>
+		<A ALT="Logout" TITLE="Logout" ID="userMenuIconLogout" CLASS="layoutTopCenterLastLink" HREF="//openhotel.org/login.cfm/mode/logout">Logout</A>
+	</DIV>
+</DIV>
+
+
+			<DIV ID="layoutTopRightIcons">
+				
+
+<FORM NAME="backofficeSearchForm" ID="backofficeSearchForm" AUTOCOMPLETE="off" ACTION="" ONSUBMIT="return false;">
+	<DIV ID="searchFormContainer">
+		<DIV CLASS="searchBoxContainer">
+			<INPUT TYPE="text" NAME="backoffice_search_keyword" ID="backoffice_search_keyword" PLACEHOLDER="Search Backoffice...">
+			<INPUT CLASS="button" DATA-COLOR="green" TYPE="submit" VALUE="GO"  NAME="backoffice_search_btn" ID="backoffice_search_btn" BORDER="0" STYLE="padding:2px 8px;">
+			<DIV ID="backoffice_search_options">
+				<DIV CLASS="backoffice_search_options_container">
+					<DIV CLASS="backoffice_search_option"><LABEL><INPUT TYPE="checkbox" ID="search_everything" NAME="search_everything" VALUE="1" ONCLICK="myLayoutManager.searchOptionClick(this)" CHECKED> Everything</LABEL></DIV>
+					<DIV CLASS="backoffice_search_option"><LABEL><INPUT TYPE="checkbox" ID="search_sites" NAME="search_sites" VALUE="1" ONCLICK="myLayoutManager.searchOptionClick(this)"> Sites</LABEL></DIV>
+					<DIV CLASS="backoffice_search_option"><LABEL><INPUT TYPE="checkbox" ID="search_clients" NAME="search_clients" VALUE="1" ONCLICK="myLayoutManager.searchOptionClick(this)"> Clients</LABEL></DIV>
+					<DIV CLASS="backoffice_search_option"><LABEL><INPUT TYPE="checkbox" ID="search_tickets" NAME="search_tickets" VALUE="1" ONCLICK="myLayoutManager.searchOptionClick(this)"> Tickets</LABEL></DIV>
+					<DIV CLASS="backoffice_search_option"><LABEL><INPUT TYPE="checkbox" ID="search_dns" NAME="search_dns" VALUE="1" ONCLICK="myLayoutManager.searchOptionClick(this)"> DNS</LABEL></DIV>
+				</DIV>
+			</DIV>
+		</DIV>
+	</DIV>
+</FORM> 
+			</DIV>
+		</DIV>
+		<DIV ID="layoutBody">
+			<DIV ID="layoutLeft">
+				<DIV ID="leftContainer">
+                    <DIV ID="leftInnerContainer">
+						
+		<SCRIPT>
+			myLayoutManager.menu_path = "sales-main/sales-leads/sales-leads-manage";
+		</SCRIPT>
+		
+
+
+<DIV CLASS="leftIconMenuContainer">
+	
+
+<DIV ID="menuBackofficeContainer">
+	<DIV CLASS="menuParent" DATA-MENU="backoffice-main" ALT="Backoffice" TITLE="Backoffice">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_backoffice_hvr.svg">
+		<SPAN>Backoffice</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-dashboard" ALT="Dashboard" TITLE="Dashboard">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_dashboard.svg">
+		<SPAN>Dashboard</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-clients" DATA-ALPHAMENU="1" ALT="Clients" TITLE="Clients" >
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_clients_hvr.svg">
+		<SPAN>Clients</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-tickets" ALT="Tickets" TITLE="Tickets">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_ticket.svg">
+		<SPAN>Tickets</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-projects" ALT="Projects" TITLE="Projects">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_project.svg">
+		<SPAN>Projects</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-support" ALT="Support" TITLE="Support">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_support_hvr.svg">
+		<SPAN>Support</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-reports" ALT="Reports" TITLE="Reports">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_reports.svg">
+		<SPAN>Reports</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="backoffice-settings" ALT="Settings" TITLE="Settings">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_global_setup_gear.svg">
+		<SPAN>Settings</SPAN>
+	</DIV>
+</DIV> 
+
+<DIV ID="menuPropertiesContainer">
+	<DIV CLASS="menuParent" DATA-MENU="properties-main" DATA-ALPHAMENU="1" ALT="Properties" TITLE="Properties">
+		<IMG TITLE="Properties" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_hotels_hvr.svg">
+		<SPAN>Properties</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="properties-dashboard" DATA-ALPHAMENU="1" ALT="Dashboard" TITLE="Dashboard">
+		<IMG TITLE="Dashboard" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_dashboard.svg">
+		<SPAN>Dashboard</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="properties-crs" ALT="CRS">
+		<IMG TITLE="CRS" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_websites_hvr.svg">
+		<SPAN>CRS</SPAN>
+	</DIV>
+	
+	<DIV CLASS="menuChild" DATA-MENU="properties-market" ALT="Market">
+		<IMG TITLE="Market" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_market_solid.svg">
+		<SPAN>Market</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="properties-reports" ALT="Reports" TITLE="Reports">
+		<IMG TITLE="Reports" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_reports.svg">
+		<SPAN>Reports</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="properties-settings" ALT="Settings">
+		<IMG TITLE="Settings" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_global_setup_gear.svg">
+		<SPAN>Settings</SPAN>
+	</DIV>
+</DIV> 
+
+<DIV ID="menuWebsiteContainer">
+	<DIV CLASS="menuParent" DATA-MENU="site-main">
+		<IMG ALT="Website" TITLE="Website" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_website_hvr.svg">
+		<SPAN>Website</SPAN>
+	</DIV>
+	
+	<DIV CLASS="menuChild" DATA-MENU="site-content">
+		<IMG ALT="Content" TITLE="Content" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_content_hvr.svg">
+		<SPAN>Content</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="site-security">
+		<IMG ALT="Security" TITLE="Security" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_security_hvr.svg">
+		<SPAN>Security</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="site-support">
+		<IMG ALT="Help &amp; Support" TITLE="Help &amp; Support" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_support_hvr.svg">
+		<SPAN>Help &amp; Support</SPAN>
+	</DIV>
+</DIV> 
+
+<DIV ID="menuPropertiesContainer">
+	<DIV CLASS="menuParent" DATA-MENU="api-main" DATA-ALPHAMENU="1" ALT="APIs" TITLE="APIs">
+		<IMG TITLE="Properties" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_hotels_hvr.svg">
+		<SPAN>APIs</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="api-access" ALT="Access">
+		<IMG TITLE="CRS" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_websites_hvr.svg">
+		<SPAN>Access</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="api-documentation" DATA-ALPHAMENU="1" ALT="Documentation" TITLE="Documentation">
+		<IMG TITLE="Dashboard" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_dashboard.svg">
+		<SPAN>Docs</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="api-reports" ALT="Reports" TITLE="Reports">
+		<IMG TITLE="Reports" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_reports.svg">
+		<SPAN>Reports</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="api-settings" ALT="Settings">
+		<IMG TITLE="Settings" CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_global_setup_gear.svg">
+		<SPAN>Settings</SPAN>
+	</DIV>
+</DIV> 
+
+<DIV ID="menuMessagingContainer">
+	<DIV CLASS="menuParent" DATA-MENU="messaging-main" ALT="Messaging" TITLE="Messaging">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_server_hvr.svg">
+		<SPAN>Messaging</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="messaging-dashboard" ALT="Dashboard" TITLE="Dashboard">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_dashboard.svg">
+		<SPAN>Dashboard</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="messaging-provisioning" ALT="Provisioning" TITLE="Provisioning">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_vendor.svg">
+		<SPAN>Provisioning</SPAN>
+	</DIV>
+	<DIV CLASS="menuChild" DATA-MENU="messaging-settings" ALT="Settings" TITLE="Settings">
+		<IMG CLASS="iconGraphic" SRC="//openhotel.com/common/images/admin/menu/icn_global_setup_gear.svg">
+		<SPAN>Settings</SPAN>
+	</DIV>
+</DIV> 
+	<BR><BR><BR><BR><BR><BR><BR><BR>
+	<DIV ID="menuMaxMinContainer">
+		<DIV ID="menuMaxMin">
+			<IMG ALT="Close" TITLE="Close" SRC="//openhotel.com/common/images/admin/menu/icn_min.svg">
+			<SPAN></SPAN>
+		</DIV>
+	</DIV>
+</DIV>
+
+<DIV CLASS="leftSubMenu">
+	<DIV ID="leftSubMenuLoading"><BR><BR><IMG  SRC="//openhotel.com/common/images/key_animated.gif"> </DIV>
+	<DIV ID="leftSubMenuContainer"></DIV>
+</DIV>
+
+
+
+
+
+					</DIV>
+				</DIV>
+			</DIV>
+			<DIV ID="layoutContent" DATA-RIGHTPANEL="1">
+				<DIV ID="layoutContentLoading"><IMG  SRC="//openhotel.com/common/images/key_animated.gif"> </DIV>
+				<DIV ID="layoutContentContainer">
+
+
+<SCRIPT TYPE="text/javascript">
+	function leadsManager() {
+		this.currentUrl = "//openhotel.org/admin/backoffice/sales/leads.cfm";
+
+		this.init = function() {
+			myHistoryManager.register("myLeadsManager");
+			jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+		};
+
+		this.send = function() {
+			var formtag = jQuery("#leadsForm");
+			var atag    = jQuery("a[name='pp_preview']",formtag);
+
+			atag.click();
+		};
+
+		this.submit = function() {
+			var formtag   = jQuery("#leadsForm");
+			var link      = myLeadsManager.currentUrl+"/header/no";
+			var isValid   = true;
+
+			isValid = validateForm("leadsForm");
+			if(!isValid) return false;
+
+			jQuery('#layoutContentContainer').hide();
+			jQuery('#layoutContentLoading').show();
+
+			formtag.ajaxSubmit({
+				url: link,
+				dataType: "json",
+				success: function(json) {
+					jQuery("#layoutContentLoading").hide();
+					jQuery("#layoutContentContainer").show();
+
+					if(json.DOCOMMIT == 1) {
+						jQuery("#leadsMessageContainer").addClass("green").html("Success").show();
+						setTimeout( function () {
+							myHistoryManager.loadContent(myLeadsManager.currentUrl);
+						}, 1500);
+					} else {
+						jQuery("#leadsMessageContainer").addClass("red").html(json.DEFINITION).show();
+					}v
+				}
+			});
+		};
+
+		this.delete = function() {
+			var formtag   = jQuery("#leadsForm");
+			var link      = myLeadsManager.currentUrl+"/mode/delete/header/no";
+			var confirmed = true;
+			var thisId    = jQuery("#id", formtag).val();
+			var formdata  = { id: thisId };
+
+			confirmed = confirm("Are you sure you want to delete this lead?");
+			if (!confirmed) return false;
+
+			jQuery('#layoutContentContainer').hide();
+			jQuery('#layoutContentLoading').show();
+
+			jQuery.post(link, formdata, function(json) {
+				jQuery("#layoutContentLoading").hide();
+				jQuery("#layoutContentContainer").show();
+
+				if (json.DOCOMMIT === 1) {
+					jQuery("#leadsMessageContainer").addClass("green").html("Success").show();
+					setTimeout( function () {
+						myHistoryManager.loadContent(myLeadsManager.currentUrl);
+					}, 1500);
+				} else {
+					jQuery("#leadsMessageContainer").addClass("red").html(json.DEFINITION).show();
+				}
+			}, "json");
+		};
+	}
+
+	myLeadsManager = new leadsManager();
+
+	jQuery(document).ready(function() {	myLeadsManager.init(); });
+
+</SCRIPT>
+
+<DIV ID="leadsMessageContainer" STYLE="text-align:center"></DIV>
+
+<link rel="stylesheet" href="./assets/css/styles.css">
+
+<FORM NAME="leadsForm" ID="leadsForm" METHOD="POST" ACTION="//openhotel.org/admin/backoffice/sales/leads.cfm" AUTOCOMPLETE="off" ONSUBMIT="return false">
+	
+		<INPUT TYPE="hidden" NAME="mode" ID="mode" VALUE="insert">
+                <div data-layout="grid">
+                    <div>
+                        <div class="titleBar">
+                            <section data-name="title" data-align="left">Leads Info</section>
+                        </div>
+                        <main class="form">
+                            <div data-layout="flex">
+                                <label for="">
+                                    <span>First Name:</span>
+                                    <input type="text">
+                                </label>
+                                <label for="">
+                                    <span>Last Name:</span>
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div data-layout="flex">
+                                <label for="">
+                                    <span>Email:</span>
+                                    <input type="text">
+                                </label>
+                                <label for="">
+                                    <span>Title:</span>
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div data-layout="flex">
+                                <label for="">
+                                    <span>Company:</span>
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <div class="yellow">
+                                <div data-layout="flex">
+                                    <label for="">
+                                        <span>Address:</span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                                <div data-layout="flex">
+                                    <label for="">
+                                        <span>City:</span>
+                                        <input type="text">
+                                    </label>
+                                    <label for="">
+                                        <span>State:</span>
+                                        <select name="" id="">
+                                            <option>- Select -</option>
+                                            <option>NV</option>
+                                            <option>FL</option>
+                                        </select>
+                                    </label>
+                                    <label for="">
+                                        <span>Zip:</span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                                <div data-layout="flex">
+                                    <label for="">
+                                        <span>Country:</span>
+                                        <select name="" id="">
+                                            <option value="">United States</option>
+                                            <option value="">option1</option>
+                                            <option value="">options2</option>
+                                        </select>
+                                    </label>
+                                    <label for="">
+                                        <span>Website:</span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                            </div>
+                            <div data-layout="flex">
+                                <label for="">
+                                    <span>Phone</span>
+                                    <input type="text">
+                                </label>
+                                <label for="">
+                                    <span>Phone2:</span>
+                                    <input type="text">
+                                </label>
+                                <label for="">
+                                    <span>Fax:</span>
+                                    <input type="text">
+                                </label>
+                            </div>
+                        </main>
+                    </div>
+                    <div class="gray">
+                        <div data-layout="flex">
+                            <label for="" data-width="50%" data-grow="0">
+                                <span>Assigned To:</span>
+                                <select name="" id="">
+                                    <option value="">- Nobody -</option>
+                                    <option value="">Lloyd</option>
+                                    <option value="">Judy</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div data-layout="flex">
+                            <label for="" data-width="50%" data-grow="0">
+                                <span>Lead Status:</span>
+                                <select name="" id="">
+                                    <option value="">Inactive</option>
+                                    <option value="">Lloyd</option>
+                                    <option value="">Judy</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div data-layout="flex" data-span="2" style="background-color:#BAD3FA;padding:10px 20px">
+                        <label for="">
+                            <textarea name="" id=""></textarea>
+                        </label>
+                        <input type="button" data-grow="0" data-width="75px" name="comment_attachment_item_id_1_managebtn" id="comment_attachment_item_id_1_managebtn" value="" title="" alt="" data-mediachooser="managebtn" data-sourcename="comment_attachment_item_id_1" style="cursor:pointer;height:75px;outline:0;border:0;background-image:url(//openhotel.com/common/images/admin/backoffice/paperclip_grey.jpg);background-position: center top;background-color:#BAD3FA;">
+                    </div>
+                </div>
+	
+        <script src="./assets/js/index.js"></script>
+	
+	
+
+	<DIV STYLE="margin-top:15px;text-align:center;">
+		<INPUT CLASS="button" DATA-COLOR="green" TYPE="submit" NAME="submit_btn" ID="submit_btn" BORDER="0" VALUE="Submit" ONCLICK="myLeadsManager.submit();"><BR>
+		<BR>
+	</DIV>
+
+	<A NAME="pp_preview" ID="pp_preview" REL="prettyPhoto" HREF="//openhotel.org/admin/backoffice/message.cfm/mode/send/section/lead/id/0/header/lite?iframe=true&width=650&height=500"></A>
+</FORM> 
+
+				</DIV>
+			</DIV>
+			<DIV ID="layoutRight">
+				<DIV ID="rightContainer">
+					
+
+
+<DIV CLASS="layoutRightSideTabsContainer">
+    <NAV CLASS="tabset">
+
+		
+		
+		
+
+        <UL CLASS="layoutRightSideTabsList">
+			
+			
+					<LI DATA-TARGET="tab_serverpageproperties" ONCLICK="myLayoutManager.toggleRightPanelItem(this)" DATA-CALLBACK="myLayoutManager.loadRightPanel('serverpageproperties')" DATA-LINK="//openhotel.org/admin/website/dashboard/panels.cfm/mode/page/header/no" ALT="Page Properties" TITLE="Page Properties">Page Properties</LI>
+				
+
+			
+            <LI DATA-TARGET="tab_messages" ONCLICK="myLayoutManager.toggleRightPanelItem(this)" DATA-CALLBACK="myLayoutManager.loadRightPanel('messages')" DATA-LINK="//openhotel.org/admin/website/dashboard/panels.cfm/mode/messages/header/no" ALT="Messages" TITLE="Messages">Messages</LI>
+
+			
+            <LI DATA-TARGET="tab_support" ONCLICK="myLayoutManager.toggleRightPanelItem(this)" DATA-CALLBACK="myLayoutManager.loadRightPanel('support')" DATA-LINK="//openhotel.org/admin/website/dashboard/panels.cfm/mode/help/header/no" ALT="Help &amp; Support" TITLE="Help &amp; Support">Help &amp; Support</LI>
+
+			
+			<A HREF="javascript:;" ONCLICK="myLayoutManager.toggleRightPanel()" ID="layoutRightSideExpand" NAME="layoutRightSideExpand">
+				<IMG SRC="//openhotel.com/common/images/admin/menu/icn_arrow_point_right.svg" ALT="Close" TITLE="Close">
+			</A>
+        </UL>
+
+		
+		
+		
+
+		
+		
+				<SECTION CLASS="layoutRightSideContent" DATA-NAME="tab_serverpageproperties">
+					<DIV CLASS="rightPanelLoading" STYLE="display:none;"> <IMG  SRC="//openhotel.com/common/images/key_animated.gif"> </DIV>
+					<DIV CLASS="rightPanelContent"></DIV>
+				</SECTION>
+			
+
+		
+        <SECTION CLASS="layoutRightSideContent" DATA-NAME="tab_messages">
+			<DIV CLASS="rightPanelLoading" STYLE="display:none;"><IMG  SRC="//openhotel.com/common/images/key_animated.gif"> </DIV>
+			<DIV CLASS="rightPanelContent"></DIV>
+		</SECTION>
+
+		
+        <SECTION CLASS="layoutRightSideContent" DATA-NAME="tab_support">
+			<DIV CLASS="rightPanelLoading" STYLE="display:none;"><IMG  SRC="//openhotel.com/common/images/key_animated.gif"> </DIV>
+			<DIV CLASS="rightPanelContent"></DIV>
+		</SECTION>
+    </NAV>
+</DIV>
+
+				</DIV>
+			</DIV>
+		</DIV>
+
+        <DIV ID="layoutFooter">
+			<DIV ID="footerContainer">
+				<DIV CLASS="layoutFooterPms">
+					<DIV CLASS="layoutFooterNode">
+						<SPAN STYLE="display: inline-block; margin-right: 10px;">Node: W09</SPAN>Site ID: 1666
+					</DIV>
+					<DIV ID="layoutFooterLogo"><IMG SRC="//openhotel.com/common/images/oh_logo_white.svg"></DIV>
+				</DIV>
+
+				<SCRIPT>
+					jQuery(document).ready(function() {
+					    var offset   = 220;
+					    var duration = 500;
+
+					    jQuery(window).scroll(function() {
+					        if (jQuery(this).scrollTop() > offset) {
+					            jQuery('.back-to-top').fadeIn(duration);
+					        } else {
+					            jQuery('.back-to-top').fadeOut(duration);
+					        }
+					    });
+
+					    jQuery('.back-to-top').click(function(event) {
+					        event.preventDefault();
+					        jQuery('html, body').animate({scrollTop: 0}, duration);
+					        return false;
+					    });
+
+						myLayoutManager.setThemeColor("theme-dark");
+                        myLayoutManager.openCloseLeft("open");
+                        myLayoutManager.openCloseRight("close");
+						myLayoutManager.setOpenFirst("no");
+					});
+				</SCRIPT>
+
+				<A HREF="#" CLASS="back-to-top">
+					<IMG SRC="//openhotel.com/common/images/admin/menu/icn_arrow_point_right.svg" ALT="Back To Top" TITLE="Back To Top">
+				</A>
+			</DIV>
+		</DIV>
+	</BODY>
+</HTML>

@@ -1,29 +1,33 @@
 @layer base;
 
 @layer base {
-    [data-layout="flow"] {
+    [data-layout="flex"] {
         /* defaults */
         --flex-direction: row;
         --flex-wrap: wrap;
-        --justify-content: space-between; // align=""
-        --align-items: center; // valign=""
-        --flex-gap: 15px;
+        --justify-content: space-between;
+        --align-items: center;
+        --flex-gap: 10px;
+        --column-gap: var(--flex-gap);
+        --row-gap: var(--flex-gap);
         --flex-width: 100%;
 
         /* defaults for children */
-        --min-width: 150px;
+        --general-min-width: 125px;
+        --button-min-width: 20px;
         --flex-basis: 0;
         --shrink: 0;
         --grow: 1;
         --order: unset;
 
         /* derived variables */
+        --gap-min: calc(var(--flex-gap) / 4);
         --gap-half: calc(var(--flex-gap) / 2);
         --gap-double: calc(var(--flex-gap) * 2);
     }
 }
 
-[data-layout="flow"] {
+[data-layout="flex"] {
     * {
         box-sizing: border-box;
     }
@@ -34,13 +38,16 @@
     justify-content: var(--justify-content);
     align-items: var(--align-items);
     gap: var(--flex-gap);
+    column-gap: var(--column-gap, var(--flex-gap));
+    row-gap: var(--row-gap, var(--flex-gap));
     padding-block: var(--gap-half);
     width: min(100%, var(--flex-width));
     > * {
+        float: none !important;
         margin: 0 !important;
-        min-width: var(--min-width);
+        min-width: var(--general-min-width);
         flex-basis: var(--flex-basis);
-        flex-grow: var(--shirnk);
+        flex-shrink: var(--shirnk);
         flex-grow: var(--grow);
         order: var(--order);
     }
@@ -48,13 +55,12 @@
     label > {
         span:first-child {
             display: block;
-            margin-bottom: var(--gap-half);
+            margin-bottom: var(--gap-min);
         }
         input, select, textarea {
             width: 100% !important;
             border: none !important;
-            outline: 1px solid #ccc;
-            padding: 4px 8px;
+            outline: 1px solid #999;
             &:focus-visible {
                 outline: 2px solid #2a82df;
             }
@@ -66,8 +72,8 @@
             max-height: 150px;
         }
     }
-    button {
-        min-width: var(--min-width, 20px)
+    :is(input[type="button"], input[type="submit"], button) {
+        min-width: var(--button-min-width);
     }
 }
 
@@ -75,7 +81,9 @@
     [data-layout="grid"] {
         /* defaults */
         --template-columns: repeat(2, 1fr);
-        --grid-gap: 25px;
+        --grid-gap: 15px;
+        --column-gap: var(--grid-gap);
+        --row-gap: var(--grid-gap);
         --grid-width: 100%;
 
         /* defaults for children */
@@ -94,6 +102,8 @@
     container-type: inline-size;
     display: grid !important;
     gap: var(--grid-gap);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
     width: min(100%, var(--grid-width));
     /* Children */
     > * {
@@ -101,7 +111,7 @@
         width: 100%;
     }
     /* Responsive */
-    @container (min-width: 600px) {
+    @container (min-width: 550px) {
         grid-template-columns: var(--template-columns);
 
         > * {

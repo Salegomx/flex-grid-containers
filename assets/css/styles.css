@@ -1,25 +1,29 @@
 @layer base;
 @layer base {
-  [data-layout=flow] {
+  [data-layout=flex] {
     /* defaults */
     --flex-direction: row;
     --flex-wrap: wrap;
     --justify-content: space-between;
     --align-items: center;
-    --flex-gap: 15px;
+    --flex-gap: 10px;
+    --column-gap: var(--flex-gap);
+    --row-gap: var(--flex-gap);
     --flex-width: 100%;
     /* defaults for children */
-    --min-width: 150px;
+    --general-min-width: 125px;
+    --button-min-width: 20px;
     --flex-basis: 0;
     --shrink: 0;
     --grow: 1;
     --order: unset;
     /* derived variables */
+    --gap-min: calc(var(--flex-gap) / 4);
     --gap-half: calc(var(--flex-gap) / 2);
     --gap-double: calc(var(--flex-gap) * 2);
   }
 }
-[data-layout=flow] {
+[data-layout=flex] {
   list-style: none;
   display: flex !important;
   flex-direction: var(--flex-direction);
@@ -27,49 +31,53 @@
   justify-content: var(--justify-content);
   align-items: var(--align-items);
   gap: var(--flex-gap);
+  column-gap: var(--column-gap, var(--flex-gap));
+  row-gap: var(--row-gap, var(--flex-gap));
   padding-block: var(--gap-half);
   width: min(100%, var(--flex-width));
   /* forms */
 }
-[data-layout=flow] * {
+[data-layout=flex] * {
   box-sizing: border-box;
 }
-[data-layout=flow] > * {
+[data-layout=flex] > * {
+  float: none !important;
   margin: 0 !important;
-  min-width: var(--min-width);
+  min-width: var(--general-min-width);
   flex-basis: var(--flex-basis);
-  flex-grow: var(--shirnk);
+  flex-shrink: var(--shirnk);
   flex-grow: var(--grow);
   order: var(--order);
 }
-[data-layout=flow] label > span:first-child {
+[data-layout=flex] label > span:first-child {
   display: block;
-  margin-bottom: var(--gap-half);
+  margin-bottom: var(--gap-min);
 }
-[data-layout=flow] label > input, [data-layout=flow] label > select, [data-layout=flow] label > textarea {
+[data-layout=flex] label > input, [data-layout=flex] label > select, [data-layout=flex] label > textarea {
   width: 100% !important;
   border: none !important;
-  outline: 1px solid #ccc;
-  padding: 4px 8px;
+  outline: 1px solid #999;
 }
-[data-layout=flow] label > input:focus-visible, [data-layout=flow] label > select:focus-visible, [data-layout=flow] label > textarea:focus-visible {
+[data-layout=flex] label > input:focus-visible, [data-layout=flex] label > select:focus-visible, [data-layout=flex] label > textarea:focus-visible {
   outline: 2px solid #2a82df;
 }
-[data-layout=flow] label > textarea {
+[data-layout=flex] label > textarea {
   resize: vertical;
   height: 75px;
   min-height: 75px;
   max-height: 150px;
 }
-[data-layout=flow] button {
-  min-width: var(--min-width, 20px);
+[data-layout=flex] :is(input[type=button], input[type=submit], button) {
+  min-width: var(--button-min-width);
 }
 
 @layer base {
   [data-layout=grid] {
     /* defaults */
     --template-columns: repeat(2, 1fr);
-    --grid-gap: 25px;
+    --grid-gap: 15px;
+    --column-gap: var(--grid-gap);
+    --row-gap: var(--grid-gap);
     --grid-width: 100%;
     /* defaults for children */
     --span: 2;
@@ -82,6 +90,8 @@
   container-type: inline-size;
   display: grid !important;
   gap: var(--grid-gap);
+  column-gap: var(--column-gap);
+  row-gap: var(--row-gap);
   width: min(100%, var(--grid-width));
   /* Children */
   /* Responsive */
@@ -93,7 +103,7 @@
   margin: 0 !important;
   width: 100%;
 }
-@container (min-width: 600px) {
+@container (min-width: 550px) {
   [data-layout=grid] {
     grid-template-columns: var(--template-columns);
   }

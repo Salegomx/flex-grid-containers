@@ -1,7 +1,9 @@
-flexContainers = document.querySelectorAll('[data-layout="flow"]');
+flexContainers = document.querySelectorAll('[data-layout="flex"]');
 
 flexContainers.forEach((container) => {
     const gap = container.getAttribute('data-gap');
+    const columnGap = container.getAttribute('column-gap');
+    const rowGap = container.getAttribute('row-gap');
     const direction = container.getAttribute('data-direction');
     const wrap = container.getAttribute('data-wrap');
     const align = container.getAttribute('data-align');
@@ -9,6 +11,8 @@ flexContainers.forEach((container) => {
     const width = container.getAttribute('data-width');
     
     if (gap) container.style.setProperty('--flex-gap', gap);
+    if (columnGap) container.style.setProperty('--column-gap', columnGap);
+    if (rowGap) container.style.setProperty('--row-gap', rowGap);
     if (direction) container.style.setProperty('--flex-direction', direction);
     if (align) container.style.setProperty('--justify-content', align);
     if (valign) container.style.setProperty('--align-items', valign);
@@ -43,10 +47,14 @@ gridContainers.forEach((container) => {
     parent.style.setProperty('container-type', 'inline-size');
 
     const gap = container.getAttribute('data-gap');
+    const columnGap = container.getAttribute('column-gap');
+    const rowGap = container.getAttribute('row-gap');
     const columns = container.getAttribute('data-columns');
     const width = container.getAttribute('data-width');
 
     if (gap) container.style.setProperty('--grid-gap', gap);
+    if (columnGap) container.style.setProperty('--column-gap', columnGap);
+    if (rowGap) container.style.setProperty('--row-gap', rowGap);
     if (columns) container.style.setProperty('--template-columns', getTemplateColumns(columns));
     if(width) container.style.setProperty('--grid-width', width);
     
