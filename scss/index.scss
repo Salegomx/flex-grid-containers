@@ -1,7 +1,7 @@
 @layer base;
 
 @layer base {
-    [data-layout="flex"] {
+    [data-layout="row"] {
         /* defaults */
         --flex-direction: row;
         --flex-wrap: wrap;
@@ -27,7 +27,7 @@
     }
 }
 
-[data-layout="flex"] {
+[data-layout="row"] {
     * {
         box-sizing: border-box;
     }
@@ -50,6 +50,14 @@
         flex-shrink: var(--shirnk);
         flex-grow: var(--grow);
         order: var(--order);
+    }
+    &[debug] {
+        outline: 3px dashed #ff8300 !important;
+        outline-offset: 4px !important;
+        > * {
+            outline: 2px dashed #ff00fb !important;
+            outline-offset: 1px !important;
+        }
     }
     /* forms */
     label > {
@@ -109,6 +117,13 @@
     > * {
         margin: 0 !important;
         width: 100%;
+    }
+    &[debug] {
+        outline: 3px dashed #f00 !important;
+        outline-offset: 4px !important;
+        > * {
+            outline: 2px dashed #0437ef !important;
+        }
     }
     /* Responsive */
     @container (min-width: 550px) {

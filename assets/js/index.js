@@ -1,4 +1,4 @@
-flexContainers = document.querySelectorAll('[data-layout="flex"]');
+flexContainers = document.querySelectorAll('[data-layout="row"]');
 
 flexContainers.forEach((container) => {
     const gap = container.getAttribute('data-gap');
@@ -71,7 +71,6 @@ gridContainers.forEach((container) => {
 
 /* Helper functions */
 function getTemplateColumns(str) {
-    console.log(str)
     return str
         .split(' ')
         .map(val => {

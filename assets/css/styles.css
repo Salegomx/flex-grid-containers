@@ -1,6 +1,6 @@
 @layer base;
 @layer base {
-  [data-layout=flex] {
+  [data-layout=row] {
     /* defaults */
     --flex-direction: row;
     --flex-wrap: wrap;
@@ -23,7 +23,7 @@
     --gap-double: calc(var(--flex-gap) * 2);
   }
 }
-[data-layout=flex] {
+[data-layout=row] {
   list-style: none;
   display: flex !important;
   flex-direction: var(--flex-direction);
@@ -37,10 +37,10 @@
   width: min(100%, var(--flex-width));
   /* forms */
 }
-[data-layout=flex] * {
+[data-layout=row] * {
   box-sizing: border-box;
 }
-[data-layout=flex] > * {
+[data-layout=row] > * {
   float: none !important;
   margin: 0 !important;
   min-width: var(--general-min-width);
@@ -49,25 +49,33 @@
   flex-grow: var(--grow);
   order: var(--order);
 }
-[data-layout=flex] label > span:first-child {
+[data-layout=row][debug] {
+  outline: 3px dashed #ff8300 !important;
+  outline-offset: 4px !important;
+}
+[data-layout=row][debug] > * {
+  outline: 2px dashed #ff00fb !important;
+  outline-offset: 1px !important;
+}
+[data-layout=row] label > span:first-child {
   display: block;
   margin-bottom: var(--gap-min);
 }
-[data-layout=flex] label > input, [data-layout=flex] label > select, [data-layout=flex] label > textarea {
+[data-layout=row] label > input, [data-layout=row] label > select, [data-layout=row] label > textarea {
   width: 100% !important;
   border: none !important;
   outline: 1px solid #999;
 }
-[data-layout=flex] label > input:focus-visible, [data-layout=flex] label > select:focus-visible, [data-layout=flex] label > textarea:focus-visible {
+[data-layout=row] label > input:focus-visible, [data-layout=row] label > select:focus-visible, [data-layout=row] label > textarea:focus-visible {
   outline: 2px solid #2a82df;
 }
-[data-layout=flex] label > textarea {
+[data-layout=row] label > textarea {
   resize: vertical;
   height: 75px;
   min-height: 75px;
   max-height: 150px;
 }
-[data-layout=flex] :is(input[type=button], input[type=submit], button) {
+[data-layout=row] :is(input[type=button], input[type=submit], button) {
   min-width: var(--button-min-width);
 }
 
@@ -102,6 +110,13 @@
 [data-layout=grid] > * {
   margin: 0 !important;
   width: 100%;
+}
+[data-layout=grid][debug] {
+  outline: 3px dashed #f00 !important;
+  outline-offset: 4px !important;
+}
+[data-layout=grid][debug] > * {
+  outline: 2px dashed #0437ef !important;
 }
 @container (min-width: 550px) {
   [data-layout=grid] {

@@ -388,130 +388,129 @@
 <link rel="stylesheet" href="./assets/css/styles.css">
 
 <FORM NAME="leadsForm" ID="leadsForm" METHOD="POST" ACTION="//openhotel.org/admin/backoffice/sales/leads.cfm" AUTOCOMPLETE="off" ONSUBMIT="return false">
-	
-		<INPUT TYPE="hidden" NAME="mode" ID="mode" VALUE="insert">
-                <div data-layout="grid">
-                    <div>
-                        <div class="titleBar">
-                            <section data-name="title" data-align="left">Leads Info</section>
-                        </div>
-                        <main class="form">
-                            <div data-layout="flex">
-                                <label for="">
-                                    <span>First Name:</span>
-                                    <input type="text">
-                                </label>
-                                <label for="">
-                                    <span>Last Name:</span>
-                                    <input type="text">
-                                </label>
-                            </div>
-                            <div data-layout="flex">
-                                <label for="">
-                                    <span>Email:</span>
-                                    <input type="text">
-                                </label>
-                                <label for="">
-                                    <span>Title:</span>
-                                    <input type="text">
-                                </label>
-                            </div>
-                            <div data-layout="flex">
-                                <label for="">
-                                    <span>Company:</span>
-                                    <input type="text">
-                                </label>
-                            </div>
-                            <div class="yellow">
-                                <div data-layout="flex">
-                                    <label for="">
-                                        <span>Address:</span>
-                                        <input type="text">
-                                    </label>
-                                </div>
-                                <div data-layout="flex">
-                                    <label for="">
-                                        <span>City:</span>
-                                        <input type="text">
-                                    </label>
-                                    <label for="">
-                                        <span>State:</span>
-                                        <select name="" id="">
-                                            <option>- Select -</option>
-                                            <option>NV</option>
-                                            <option>FL</option>
-                                        </select>
-                                    </label>
-                                    <label for="">
-                                        <span>Zip:</span>
-                                        <input type="text">
-                                    </label>
-                                </div>
-                                <div data-layout="flex">
-                                    <label for="">
-                                        <span>Country:</span>
-                                        <select name="" id="">
-                                            <option value="">United States</option>
-                                            <option value="">option1</option>
-                                            <option value="">options2</option>
-                                        </select>
-                                    </label>
-                                    <label for="">
-                                        <span>Website:</span>
-                                        <input type="text">
-                                    </label>
-                                </div>
-                            </div>
-                            <div data-layout="flex">
-                                <label for="">
-                                    <span>Phone</span>
-                                    <input type="text">
-                                </label>
-                                <label for="">
-                                    <span>Phone2:</span>
-                                    <input type="text">
-                                </label>
-                                <label for="">
-                                    <span>Fax:</span>
-                                    <input type="text">
-                                </label>
-                            </div>
-                        </main>
-                    </div>
-                    <div class="gray">
-                        <div data-layout="flex">
-                            <label for="" data-width="50%" data-grow="0">
-                                <span>Assigned To:</span>
-                                <select name="" id="">
-                                    <option value="">- Nobody -</option>
-                                    <option value="">Lloyd</option>
-                                    <option value="">Judy</option>
-                                </select>
-                            </label>
-                        </div>
-                        <div data-layout="flex">
-                            <label for="" data-width="50%" data-grow="0">
-                                <span>Lead Status:</span>
-                                <select name="" id="">
-                                    <option value="">Inactive</option>
-                                    <option value="">Lloyd</option>
-                                    <option value="">Judy</option>
-                                </select>
-                            </label>
-                        </div>
-                    </div>
-                    <div data-layout="flex" data-span="2" style="background-color:#BAD3FA;padding:10px 20px">
-                        <label for="">
-                            <textarea name="" id=""></textarea>
-                        </label>
-                        <input type="button" data-grow="0" data-width="75px" name="comment_attachment_item_id_1_managebtn" id="comment_attachment_item_id_1_managebtn" value="" title="" alt="" data-mediachooser="managebtn" data-sourcename="comment_attachment_item_id_1" style="cursor:pointer;height:75px;outline:0;border:0;background-image:url(//openhotel.com/common/images/admin/backoffice/paperclip_grey.jpg);background-position: center top;background-color:#BAD3FA;">
-                    </div>
-                </div>
-	
-        <script src="./assets/js/index.js"></script>
-	
-	
+	<INPUT TYPE="hidden" NAME="mode" ID="mode" VALUE="insert">
 
+
+	<div data-layout="grid" data-gap="50px">
+		<div>
+			<div class="titleBar">
+				<section data-name="title" data-align="left">Leads Info</section>
+			</div>
+			<main class="form">
+				<div data-layout="row">
+					<label for="">
+						<span>First Name:</span>
+						<input type="text">
+					</label>
+					<label for="">
+						<span>Last Name:</span>
+						<input type="text">
+					</label>
+				</div>
+				<div data-layout="row">
+					<label for="">
+						<span>Email:</span>
+						<input type="text">
+					</label>
+					<label for="">
+						<span>Title:</span>
+						<input type="text">
+					</label>
+				</div>
+				<div data-layout="row">
+					<label for="">
+						<span>Company:</span>
+						<input type="text">
+					</label>
+				</div>
+				<div class="yellow">
+					<div data-layout="row">
+						<label for="">
+							<span>Address:</span>
+							<input type="text">
+						</label>
+					</div>
+					<div data-layout="row">
+						<label for="">
+							<span>City:</span>
+							<input type="text">
+						</label>
+						<label for="">
+							<span>State:</span>
+							<select name="" id="">
+								<option>- Select -</option>
+								<option>NV</option>
+								<option>FL</option>
+							</select>
+						</label>
+						<label for="">
+							<span>Zip:</span>
+							<input type="text">
+						</label>
+					</div>
+					<div data-layout="row">
+						<label for="">
+							<span>Country:</span>
+							<select name="" id="">
+								<option value="">United States</option>
+								<option value="">option1</option>
+								<option value="">options2</option>
+							</select>
+						</label>
+						<label for="">
+							<span>Website:</span>
+							<input type="text">
+						</label>
+					</div>
+				</div>
+				<div data-layout="row">
+					<label for="">
+						<span>Phone</span>
+						<input type="text">
+					</label>
+					<label for="">
+						<span>Phone2:</span>
+						<input type="text">
+					</label>
+					<label for="">
+						<span>Fax:</span>
+						<input type="text">
+					</label>
+				</div>
+			</main>
+		</div>
+		<div class="gray">
+			<div data-layout="row">
+				<label for="" data-width="50%" data-grow="0">
+					<span>Assigned To:</span>
+					<select name="" id="">
+						<option value="">- Nobody -</option>
+						<option value="">Lloyd</option>
+						<option value="">Judy</option>
+					</select>
+				</label>
+			</div>
+			<div data-layout="row">
+				<label for="" data-width="50%" data-grow="0">
+					<span>Lead Status:</span>
+					<select name="" id="">
+						<option value="">Inactive</option>
+						<option value="">Lloyd</option>
+						<option value="">Judy</option>
+					</select>
+				</label>
+			</div>
+		</div>
+		<div data-layout="row" style="background-color:#BAD3FA;padding:10px 20px">
+			<label for="">
+				<textarea name="" id=""></textarea>
+			</label>
+			<input type="button" data-grow="0" data-width="75px" name="comment_attachment_item_id_1_managebtn" id="comment_attachment_item_id_1_managebtn" value="" title="" alt="" data-mediachooser="managebtn" data-sourcename="comment_attachment_item_id_1" style="cursor:pointer;height:75px;outline:0;border:0;background-image:url(//openhotel.com/common/images/admin/backoffice/paperclip_grey.jpg);background-position: center top;background-color:#BAD3FA;">
+		</div>
+	</div>
+	
+	<script src="./assets/js/index.js"></script>
+	
 	<DIV STYLE="margin-top:15px;text-align:center;">
 		<INPUT CLASS="button" DATA-COLOR="green" TYPE="submit" NAME="submit_btn" ID="submit_btn" BORDER="0" VALUE="Submit" ONCLICK="myLeadsManager.submit();"><BR>
 		<BR>
